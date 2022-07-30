@@ -22,3 +22,15 @@ function update() {
   output.innerHTML = input.value;
   //   console.log(input.value);
 }
+console.log("Starting");
+function handleAddNewToDo() {
+  console.log("Add New To Do List");
+}
+
+function DoBindings() {
+  console.log("Bindings!");
+  var btn = document.getElementById("Addbtn");
+  btn.onclick = handleAddNewToDo();
+}
+window.onload = DoBindings;
+console.log("Finished");
