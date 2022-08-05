@@ -17,5 +17,5 @@ function handlebtnclick() {
 }
 
 function removeMe() {
-  $(this).remove();
+  $(this).fadeOut();
 }
