@@ -75,7 +75,7 @@ class ServerService{
   }
 
   fetchCartDetailsByID(ID){
-    return axios.get(`/cart/${ID}`)
+    return axios.get(`/myCart/${ID}`)
   }
 
   fetchWishlistDetailsByID(ID){
