@@ -3,10 +3,15 @@ let currentPage = 1;
 let perPage = 10;
 let favorites = []; 
 
+const apiUrl = 'https://uni-app-green.vercel.app/http://universities.hipolabs.com/search?country=yourCountry';
+
 async function fetchUniversitiesByCountry(country) {
   try {
-    const url = `http://universities.hipolabs.com/search?country=${country}`;
-    const response = await fetch(url);
+    const response = await fetch(apiUrl, {
+      headers: {
+        'Origin': 'https://uni-app-green.vercel.app' // Replace with your Netlify app's URL
+      }
+    });
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -19,6 +24,7 @@ async function fetchUniversitiesByCountry(country) {
     return [];
   }
 }
+
 
 
 function displayUniversitiesOnPage(page) {
