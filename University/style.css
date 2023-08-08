@@ -142,3 +142,52 @@ body {
   .dIB{
     margin-bottom: 10.5rem;
   }
+
+
+
+  
+/* Media query for screens up to 768px */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Make cards take up the full width of the screen */
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 5px; /* Reduce padding for modal content on smaller screens */
+  }
+  
+  .formStyling {
+    padding: 1rem; /* Reduce padding for the search form on smaller screens */
+  }
+  
+  .updateBtn {
+    font-size: 10px; /* Adjust font size for update buttons */
+    padding: 8px 3px; /* Adjust padding for update buttons */
+  }
+  .moveToBottomBtn{
+    font-size: 10px; /* Adjust font size for update buttons */
+  }
+ 
+  
+  input {
+    font-size: 14px; /* Adjust font size for input fields */
+    padding: 8px; /* Adjust padding for input fields */
+  }
+
+  
+  /* Adjust other styles as needed for screens up to 768px */
+}
+
+/* Media query for screens up to 576px */
+@media (max-width: 428px) {
+  .updateBtn {
+    font-size: 9px; /* Adjust font size for update buttons */
+    padding: 8px 0; /* Adjust padding for update buttons */
+  }
+  .moveToTopBtn{
+    font-size: 10px; /* Adjust font size for update buttons */
+  }
+  /* Further adjustments for screens up to 576px */
+}
