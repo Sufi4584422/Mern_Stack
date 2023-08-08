@@ -3,15 +3,11 @@ let currentPage = 1;
 let perPage = 10;
 let favorites = []; 
 
-const apiUrl = 'http://universities.hipolabs.com/search?country=yourCountry';
+const apiUrl = 'https://uni-app-green.vercel.app/http://universities.hipolabs.com/search?country=yourCountry';
 
 async function fetchUniversitiesByCountry(country) {
   try {
-    const response = await fetch(apiUrl, {
-      headers: {
-        'Origin': 'https://uni-app-green.vercel.app' // Replace with your Netlify app's URL
-      }
-    });
+    const response = await fetch(apiUrl);
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
