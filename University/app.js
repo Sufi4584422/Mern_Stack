@@ -3,23 +3,27 @@ let currentPage = 1;
 let perPage = 10;
 let favorites = []; 
 
-const apiUrl = 'https://uni-app-green.vercel.app/http://universities.hipolabs.com/search?country=yourCountry';
-
 async function fetchUniversitiesByCountry(country) {
   try {
-    const response = await fetch(apiUrl);
+    const url = 'data.json'; // Use the correct path to your data.json file
+    const response = await fetch(url);
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     
     const universities = await response.json();
-    return universities;
+    
+    // Filter universities based on the given country
+    const universitiesByCountry = universities.filter(university => university.country.toLowerCase() == country.toLowerCase() );
+    
+    return universitiesByCountry;
   } catch (error) {
     console.error("Error fetching universities:", error.message);
     return [];
   }
 }
+
 
 
 
