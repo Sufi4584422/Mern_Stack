@@ -3,7 +3,7 @@ let currentPage = 1;
 let perPage = 10;
 let favorites = []; 
 
-const apiUrl = 'https://uni-app-green.vercel.app/http://universities.hipolabs.com/search?country=yourCountry';
+const apiUrl = 'http://universities.hipolabs.com/search?country=yourCountry';
 
 async function fetchUniversitiesByCountry(country) {
   try {
